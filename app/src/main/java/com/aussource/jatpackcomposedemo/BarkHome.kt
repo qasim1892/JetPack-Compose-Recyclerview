@@ -10,7 +10,7 @@ import com.aussource.jatpackcomposedemo.model.DataProvider
 import com.aussource.jatpackcomposedemo.model.Puppy
 
 @Composable
-fun barkHomeContent() {
+fun barkHomeContent(navigateToProfile: (Puppy) -> Unit) {
     val puppies = remember {
         DataProvider.puppyList
     }
@@ -20,7 +20,7 @@ fun barkHomeContent() {
         )
     ) {
         items(items = puppies, itemContent = {
-            puppyListItems(puppy = it)
+            puppyListItems(puppy = it, navigationToProfile = navigateToProfile)
         })
     }
 }
