@@ -8,7 +8,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.RequiresApi
 import com.aussource.jatpackcomposedemo.model.Puppy
-import com.aussource.jatpackcomposedemo.ui.theme.myTheme
+import com.aussource.jatpackcomposedemo.ui.theme.MyTheme
 
 @RequiresApi(Build.VERSION_CODES.TIRAMISU)
 class ProfileActivity : ComponentActivity() {
@@ -20,7 +20,7 @@ class ProfileActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            myTheme {
+            MyTheme {
                 ProfileScreen(puppy)
             }
         }

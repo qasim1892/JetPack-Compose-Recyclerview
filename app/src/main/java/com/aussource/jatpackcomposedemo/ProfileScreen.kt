@@ -34,7 +34,7 @@ fun ProfileScreen(puppy: Puppy, onNavIconPressed: () -> Unit = { }) {
     }
 
     @Composable
-    fun profileHeader(
+    fun ProfileHeader(
         scrollState: ScrollState,
         puppy: Puppy,
         containerHeight: Dp
